@@ -36,7 +36,7 @@
     const auth=getAuth();
     const db=getFirestore();
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email='Superadmin@gmail.com', password='Knitta2024')
     .then((userCredential)=>{
         const user=userCredential.user;
         const userData={
