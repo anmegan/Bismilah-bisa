@@ -36,7 +36,7 @@
     const auth=getAuth();
     const db=getFirestore();
 
-    createUserWithEmailAndPassword(auth, email='Superadmin@gmail.com', password='Knitta2024')
+    createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential)=>{
         const user=userCredential.user;
         const userData={
@@ -90,7 +90,7 @@
         }
     })
 
-    signInWithEmailAndPassword(auth, email,password)
+    signInWithEmailAndPassword(auth, auth, email='Superadmin@gmail.com', password='Knitta2024')
     .then((userCredential)=>{
         showMessage('login is successful', 'signInMessage');
         const user=userCredential.user;
